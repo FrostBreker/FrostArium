@@ -1,0 +1,68 @@
+item.item_stick.name=Arium Stick
+item.item_ingot_arium.name=Arium Ingot
+item.item_sword_arium.name=Arium Sword
+item.item_pickaxe_arium.name=Arium Pickaxe
+item.item_axe_arium.name=Arium Axe
+item.item_shovel_arium.name=Arium Shovel
+item.item_hoe_arium.name=Arium Hoe
+item.item_helmet_arium.name=Arium Helmet
+item.item_chestplate_arium.name=Arium Chestplate
+item.item_leggings_arium.name=Arium Leggings
+item.item_boots_arium.name=Arium Boots
+
+item.item_ingot_nuclerium.name=Nuclerium Ingot
+item.item_stick_nuclerium.name=Nuclerium Stick
+item.item_sword_nuclerium.name=Nuclerium Sword
+item.item_pickaxe_nuclerium.name=Nuclerium Pickaxe
+item.item_axe_nuclerium.name=Nuclerium Axe
+item.item_shovel_nuclerium.name=Nuclerium Shovel
+item.item_hoe_nuclerium.name=Nuclerium Hoe
+item.item_helmet_nuclerium.name=Nuclerium Helmet
+item.item_chestplate_nuclerium.name=Nuclerium Chestplate
+item.item_leggings_nuclerium.name=Nuclerium Leggings
+item.item_boots_nuclerium.name=Nuclerium Boots
+
+item.item_ingot_rubyum.name=Rubyum Ingot
+item.item_stick_rubyum.name=Rubyum Stick
+item.item_sword_rubyum.name=Rubyum Sword
+item.item_pickaxe_rubyum.name=Rubyum Pickaxe
+item.item_axe_rubyum.name=Rubyum Axe
+item.item_shovel_rubyum.name=Rubyum Shovel
+item.item_hoe_rubyum.name=Rubyum Hoe
+item.item_helmet_rubyum.name=Rubyum Helmet
+item.item_chestplate_rubyum.name=Rubyum Chestplate
+item.item_leggings_rubyum.name=Rubyum Leggings
+item.item_boots_rubyum.name=Rubyum Boots
+
+item.item_ingot_optarium.name=Optarium Ingot
+item.item_stick_optarium.name=Optarium Stick
+item.item_sword_optarium.name=Optarium Sword
+item.item_pickaxe_optarium.name=Optarium Pickaxe
+item.item_axe_optarium.name=Optarium Axe
+item.item_shovel_optarium.name=Optarium Shovel
+item.item_hoe_optarium.name=Optarium Hoe
+item.item_helmet_optarium.name=Optarium Helmet
+item.item_chestplate_optarium.name=Optarium Chestplate
+item.item_leggings_optarium.name=Optarium Leggings
+item.item_boots_optarium.name=Optarium Boots
+
+item.item_nuggets_arium.name=Arium Nugget
+item.item_nuggets_nuclerium.name=Nuclerium Nugget
+item.item_nuggets_rubyum.name=Rubyum Nugget
+item.item_nuggets_optarium.name=Optarium Nugget
+
+
+
+tile.block_arium_block.name=Arium Block
+tile.block_green_screen.name=Green Screen
+tile.block_arium_ore.name=Arium Ore
+tile.block_nuclerium_ore.name=Nuclerium Ore
+tile.block_nuclerium_block.name=Nuclerium Block
+tile.block_rubyum_ore.name=Rubyum Ore
+tile.block_rubyum_block.name=Rubyum Block
+tile.block_optarium_ore.name=Optarium Ore
+tile.block_optarium_block.name=Optarium Block
+
+
+itemGroup.FrostArium=Frost Arium
+itemGroup.FrostArium Tool=Frost Arium Tool

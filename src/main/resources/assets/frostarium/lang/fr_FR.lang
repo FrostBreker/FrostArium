@@ -1,0 +1,65 @@
+item.item_stick.name=Batton d'Arium
+item.item_ingot_arium.name=L'ingot d'Arium
+item.item_sword_arium.name=épée en Arium
+item.item_pickaxe_arium.name=Pioche en Arium
+item.item_axe_arium.name=Hache en Arium
+item.item_shovel_arium.name=Pelle en Arium
+item.item_hoe_arium.name=Bèche en Arium
+item.item_helmet_arium.name=Casque en Arium
+item.item_chestplate_arium.name=Plastron en Arium
+item.item_leggings_arium.name=Pentalon en Arium
+item.item_boots_arium.name=Bottes en Arium
+
+item.item_ingot_nuclerium.name=L'ingot en Nuclerium
+item.item_stick_nuclerium.name=Baton en Nuclerium
+item.item_sword_nuclerium.name=épée en Nuclerium
+item.item_pickaxe_nuclerium.name=Pioche en Nuclerium
+item.item_axe_nuclerium.name=Hache en Nuclerium
+item.item_shovel_nuclerium.name=Pelle en Nuclerium
+item.item_hoe_nuclerium.name=Bèche en Nuclerium
+item.item_helmet_nuclerium.name=Casque en Nuclerium
+item.item_chestplate_nuclerium.name=Plastron en Nuclerium
+item.item_leggings_nuclerium.name=Jambière en Nuclerium
+item.item_boots_nuclerium.name=Bootes en Nuclerium
+
+item.item_ingot_rubyum.name=L'ingot en Rubyum
+item.item_stick_rubyum.name=Batton en Rubyum
+item.item_sword_rubyum.name=épée en Rubyum
+item.item_pickaxe_rubyum.name=Pioche en Rubyum
+item.item_axe_rubyum.name=Hache en Rubyum
+item.item_shovel_rubyum.name=Pelle en Rubyum
+item.item_hoe_rubyum.name=Bèche en Rubyum
+item.item_helmet_rubyum.name=Casque en Rubyum
+item.item_chestplate_rubyum.name=Plastron en Rubyum
+item.item_leggings_rubyum.name=Pentallon en Rubyum
+item.item_boots_rubyum.name=Bottes en Rubyum
+
+item.item_ingot_optarium.name=L'ingot en Optarium
+item.item_stick_optarium.name=Batton en Optarium
+item.item_sword_optarium.name=épée en Optarium
+item.item_pickaxe_optarium.name=Pioche en Optarium
+item.item_axe_optarium.name=Hache en Optarium
+item.item_shovel_optarium.name=Pelle en Optarium
+item.item_hoe_optarium.name=Bèche en Optarium
+item.item_helmet_optarium.name=Casque en Optarium
+item.item_chestplate_optarium.name=Plastron en Optarium
+item.item_leggings_optarium.name=Pentallon en Optarium
+item.item_boots_optarium.name=Bottes en Optarium
+
+item.item_nuggets_arium.name=Pepite en Optarium
+item.item_nuggets_nuclerium.name=Pepite en Optarium
+item.item_nuggets_rubyum.name=Pepite en Optarium
+item.item_nuggets_optarium.name=Pepite en Optarium
+
+tile.block_arium_block.name=Block d'Arium
+tile.block_green_screen.name=Fond Vert
+tile.block_arium_ore.name=Minerais d'Arium
+tile.block_nuclerium_ore.name=Minerais de Nuclerium
+tile.block_nuclerium_block.name=Block de Nuclerium
+tile.block_rubyum_ore.name=Minerais de Rubyum
+tile.block_rubyum_block.name=Block de Rubyum
+tile.block_optarium_ore.name=Minerais d'Optarium
+tile.block_optarium_block.name=Block en Optarium
+
+itemGroup.FrostArium=Frost Arium
+itemGroup.FrostArium Tool=Frost Arium Outils

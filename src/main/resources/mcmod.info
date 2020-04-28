@@ -1,0 +1,16 @@
+[
+{
+  "modid": "frostarium",
+  "name": "Frost Arium",
+  "description": "Le mod qui rajoute telement peux de contenue que c'est trop bien enfaite !",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://www.youtube.com/channel/UC_-Zw6qFTcYd5Ka8TGK4M_Q?view_as=subscriber",
+  "updateUrl": "https://www.youtube.com/channel/UC_-Zw6qFTcYd5Ka8TGK4M_Q?view_as=subscriber",
+  "authorList": ["FrostBreker"],
+  "credits": "Credit FrostBreker Inc.",
+  "logoFile": "frostarialogo.jpg",
+  "screenshots": [],
+  "dependencies": []
+}
+]
