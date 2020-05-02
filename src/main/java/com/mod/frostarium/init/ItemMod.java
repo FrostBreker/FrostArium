@@ -8,6 +8,7 @@ import com.mod.frostarium.items.ItemAxeArium;
 import com.mod.frostarium.items.ItemAxeNuclerium;
 import com.mod.frostarium.items.ItemAxeRubyum;
 import com.mod.frostarium.items.ItemAxeoptarium;
+import com.mod.frostarium.items.ItemHammerArium;
 import com.mod.frostarium.items.ItemHoeArium;
 import com.mod.frostarium.items.ItemHoeNuclerium;
 import com.mod.frostarium.items.ItemHoeOptarium;
@@ -16,6 +17,7 @@ import com.mod.frostarium.items.ItemPickaxeArium;
 import com.mod.frostarium.items.ItemPickaxeNuclerium;
 import com.mod.frostarium.items.ItemPickaxeOptarium;
 import com.mod.frostarium.items.ItemPickaxeRubyum;
+import com.mod.frostarium.items.ItemSeedArium;
 import com.mod.frostarium.items.ItemShovelArium;
 import com.mod.frostarium.items.ItemShovelNuclerium;
 import com.mod.frostarium.items.ItemShovelOptarium;
@@ -27,6 +29,7 @@ import com.mod.frostarium.items.ItemSwordoptarium;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item.ToolMaterial;
@@ -39,6 +42,7 @@ public class ItemMod
     public static ToolMaterial toolNuclerium = EnumHelper.addToolMaterial("toolNuclerium", 4, 6000, 22, 9, 30);
     public static ToolMaterial toolRubyum = EnumHelper.addToolMaterial("toolRubyum", 4, 4000, 18, 7, 30);
     public static ToolMaterial toolOptarium = EnumHelper.addToolMaterial("toolOptarium", 4, 5000, 20, 8, 30);
+    public static ToolMaterial toolHammerArium = EnumHelper.addToolMaterial("toolHammerArium", 4, 6000, 14, 9, 30);
     
     
     public static ArmorMaterial armorArium = EnumHelper.addArmorMaterial("armorArium", 202, new int[] {5, 11, 7, 5}, 30);
@@ -54,10 +58,12 @@ public class ItemMod
 //Rubyum    
     public static Item item_ingot_rubyum, item_stick_rubyum, item_sword_rubyum, item_pickaxe_rubyum, item_axe_rubyum, item_shovel_rubyum, item_hoe_rubyum, helmetArmorrubyum, chestplateArmorrubyum, leggingsArmorrubyum, bootsArmorrubyum;
 //Optarium    
-    public static Item item_stick_optarium, item_sword_optarium, item_pickaxe_optarium, item_axe_optarium, item_shovel_optarium, item_hoe_optarium, item_ingot_optarium, leggingsArmoroptarium, helmetArmoroptarium, chestplateArmoroptarium, bootsArmoroptarium;
+    public static Item item_stick_optarium, item_sword_optarium, item_pickaxe_optarium, item_axe_optarium, item_shovel_optarium, item_hoe_optarium, item_ingot_optarium, leggingsArmoroptarium, helmetArmoroptarium, chestplateArmoroptarium, bootsArmoroptarium;    
+//Hammer
+    public static Item item_hammer_arium;
     
     //Divers
-    public static Item item_nuggets_arium, item_nuggets_nuclerium, item_nuggets_rubyum, item_nuggets_optarium;
+    public static Item item_nuggets_arium, item_nuggets_rubyum, item_nuggets_optarium, item_nuggets_nuclerium, seed_arium;
     
     public static void init()
     {
@@ -110,6 +116,9 @@ public class ItemMod
         item_nuggets_nuclerium = new Item().setUnlocalizedName("item_nuggets_nuclerium").setCreativeTab(ModFrostArium.tabFrostArium).setTextureName(Reference.MOD_ID + ":nuclerium_nugget_frostarium");
         item_nuggets_rubyum = new Item().setUnlocalizedName("item_nuggets_rubyum").setCreativeTab(ModFrostArium.tabFrostArium).setTextureName(Reference.MOD_ID + ":rubyum_nugget_frostarium");
         item_nuggets_optarium = new Item().setUnlocalizedName("item_nuggets_optarium").setCreativeTab(ModFrostArium.tabFrostArium).setTextureName(Reference.MOD_ID + ":optarium_nugget_frostarium");
+        seed_arium = new ItemSeedArium(BlockMod.culture_arium, Blocks.farmland).setUnlocalizedName("item_seed_arium").setCreativeTab(ModFrostArium.tabFrostArium).setTextureName(Reference.MOD_ID + ":seed_arium");
+        
+        item_hammer_arium = new ItemHammerArium(toolHammerArium).setUnlocalizedName("item_hammer_arium").setCreativeTab(ModFrostArium.tabFrostAriumTool).setTextureName(Reference.MOD_ID + ":item_hammer_arium_frostarium");
         
     }
     
@@ -164,72 +173,11 @@ public class ItemMod
         GameRegistry.registerItem(item_nuggets_nuclerium, "item_nuggets_nuclerium");
         GameRegistry.registerItem(item_nuggets_rubyum, "item_nuggets_rubyum");
         GameRegistry.registerItem(item_nuggets_optarium, "item_nuggets_optarium");
+        GameRegistry.registerItem(seed_arium, "seed_arium");
         
-  //Arium     
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_stick, 2), new Object[] {"#", "#", '#', ItemMod.item_ingot_arium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_sword_arium, 1), new Object[] {"#", "#", "F", '#', ItemMod.item_ingot_arium, 'F', ItemMod.item_stick});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_pickaxe_arium, 1), new Object[] {"EEE", " F ", " F ", 'E', ItemMod.item_ingot_arium, 'F', ItemMod.item_stick});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_axe_arium, 1), new Object[] {"EE ", "EF ", " F ", 'E', ItemMod.item_ingot_arium, 'F', ItemMod.item_stick});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_shovel_arium, 1), new Object[] {" E ", " F ", " F ", 'E', ItemMod.item_ingot_arium, 'F', ItemMod.item_stick});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_hoe_arium, 1), new Object[] {"EE ", " F ", " F ", 'E', ItemMod.item_ingot_arium, 'F', ItemMod.item_stick});
+        GameRegistry.registerItem(item_hammer_arium, "item_hammer_arium");
         
-        
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_nuggets_arium, 9), new Object[] {"E", 'E', ItemMod.item_ingot_arium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_nuggets_nuclerium, 9), new Object[] {"E", 'E', ItemMod.item_ingot_nuclerium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_nuggets_rubyum, 9), new Object[] {"E", 'E', ItemMod.item_ingot_rubyum});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_nuggets_optarium, 9), new Object[] {"E", 'E', ItemMod.item_ingot_optarium});
-       
- //Nugget       
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_ingot_arium, 1), new Object[] {"###", "###", "###", '#', ItemMod.item_nuggets_arium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_ingot_nuclerium, 1), new Object[] {"###", "###", "###", '#', ItemMod.item_nuggets_nuclerium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_ingot_rubyum, 1), new Object[] {"###", "###", "###", '#', ItemMod.item_nuggets_rubyum}); 
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_ingot_optarium, 1), new Object[] {"###", "###", "###", '#', ItemMod.item_nuggets_optarium});
-        
-        
-        GameRegistry.addRecipe(new ItemStack(ItemMod.helmetArmorarium, 1), new Object[] {"###", "# #", '#', ItemMod.item_ingot_arium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.chestplateArmorarium, 1), new Object[] {"# #", "###", "###", '#', ItemMod.item_ingot_arium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.leggingsArmorarium, 1), new Object[] {"###", "# #", "# #", '#', ItemMod.item_ingot_arium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.bootsArmorarium, 1), new Object[] {"# #", "# #", '#', ItemMod.item_ingot_arium});
-        
-        
-   //Nuclerium  
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_stick_nuclerium, 2), new Object[] {"#", "#", '#', ItemMod.item_ingot_nuclerium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_sword_nuclerium, 1), new Object[] {"#", "#", "F", '#', ItemMod.item_ingot_nuclerium, 'F', ItemMod.item_stick_nuclerium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_pickaxe_nuclerium, 1), new Object[] {"EEE", " F ", " F ", 'E', ItemMod.item_ingot_nuclerium, 'F', ItemMod.item_stick_nuclerium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_axe_nuclerium, 1), new Object[] {"EE ", "EF ", " F ", 'E', ItemMod.item_ingot_nuclerium, 'F', ItemMod.item_stick_nuclerium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_shovel_nuclerium, 1), new Object[] {" E ", " F ", " F ", 'E', ItemMod.item_ingot_nuclerium, 'F', ItemMod.item_stick_nuclerium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_hoe_nuclerium, 1), new Object[] {"EE ", " F ", " F ", 'E', ItemMod.item_ingot_nuclerium, 'F', ItemMod.item_stick_nuclerium});
-        
-        GameRegistry.addRecipe(new ItemStack(ItemMod.helmetArmornuclerium, 1), new Object[] {"###", "# #", '#', ItemMod.item_ingot_nuclerium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.chestplateArmornuclerium, 1), new Object[] {"# #", "###", "###", '#', ItemMod.item_ingot_nuclerium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.leggingsArmornuclerium, 1), new Object[] {"###", "# #", "# #", '#', ItemMod.item_ingot_nuclerium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.bootsArmornuclerium, 1), new Object[] {"# #", "# #", '#', ItemMod.item_ingot_nuclerium});
-        
-      //Rubyum
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_stick_rubyum, 2), new Object[] {"#", "#", '#', ItemMod.item_ingot_rubyum});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_sword_rubyum, 1), new Object[] {"#", "#", "F", '#', ItemMod.item_ingot_rubyum, 'F', ItemMod.item_stick_rubyum});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_pickaxe_rubyum, 1), new Object[] {"EEE", " F ", " F ", 'E', ItemMod.item_ingot_rubyum, 'F', ItemMod.item_stick_rubyum});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_axe_rubyum, 1), new Object[] {"EE ", "EF ", " F ", 'E', ItemMod.item_ingot_rubyum, 'F', ItemMod.item_stick_rubyum});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_shovel_rubyum, 1), new Object[] {" E ", " F ", " F ", 'E', ItemMod.item_ingot_rubyum, 'F', ItemMod.item_stick_rubyum});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_hoe_rubyum, 1), new Object[] {"EE ", " F ", " F ", 'E', ItemMod.item_ingot_rubyum, 'F', ItemMod.item_stick_rubyum});
-        
-        GameRegistry.addRecipe(new ItemStack(ItemMod.helmetArmorrubyum, 1), new Object[] {"###", "# #", '#', ItemMod.item_ingot_rubyum});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.chestplateArmorrubyum, 1), new Object[] {"# #", "###", "###", '#', ItemMod.item_ingot_rubyum});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.leggingsArmorrubyum, 1), new Object[] {"###", "# #", "# #", '#', ItemMod.item_ingot_rubyum});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.bootsArmorrubyum, 1), new Object[] {"# #", "# #", '#', ItemMod.item_ingot_rubyum});
-        
-        //Optarium
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_stick_optarium, 2), new Object[] {"#", "#", '#', ItemMod.item_ingot_optarium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_sword_optarium, 1), new Object[] {"#", "#", "F", '#', ItemMod.item_ingot_optarium, 'F', ItemMod.item_stick_optarium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_pickaxe_optarium, 1), new Object[] {"EEE", " F ", " F ", 'E', ItemMod.item_ingot_optarium, 'F', ItemMod.item_stick_optarium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_axe_optarium, 1), new Object[] {"EE ", "EF ", " F ", 'E', ItemMod.item_ingot_optarium, 'F', ItemMod.item_stick_optarium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_shovel_optarium, 1), new Object[] {" E ", " F ", " F ", 'E', ItemMod.item_ingot_optarium, 'F', ItemMod.item_stick_optarium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.item_hoe_optarium, 1), new Object[] {"EE ", " F ", " F ", 'E', ItemMod.item_ingot_optarium, 'F', ItemMod.item_stick_optarium});
-        
-        GameRegistry.addRecipe(new ItemStack(ItemMod.helmetArmoroptarium, 1), new Object[] {"###", "# #", '#', ItemMod.item_ingot_optarium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.chestplateArmoroptarium, 1), new Object[] {"# #", "###", "###", '#', ItemMod.item_ingot_optarium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.leggingsArmoroptarium, 1), new Object[] {"###", "# #", "# #", '#', ItemMod.item_ingot_optarium});
-        GameRegistry.addRecipe(new ItemStack(ItemMod.bootsArmoroptarium, 1), new Object[] {"# #", "# #", '#', ItemMod.item_ingot_optarium});
+ 
         
         
     }

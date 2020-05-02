@@ -6,7 +6,6 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;
 import net.minecraft.entity.ai.EntityAILookIdle;
-import net.minecraft.entity.ai.EntityAIMoveThroughVillage;
 import net.minecraft.entity.ai.EntityAIMoveTowardsRestriction;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityAISwimming;
@@ -17,17 +16,16 @@ import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeModContainer;
 
-public class EntityArium extends EntityMob
+public class EntityNuclerium extends EntityMob
 {
 
-    public EntityArium(World p_i1738_1_)
+    public EntityNuclerium(World p_i1738_1_)
     {
         super(p_i1738_1_);
         this.getNavigator().setBreakDoors(true);
         this.tasks.addTask(0, new EntityAISwimming(this));
-        this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, 5.0D, false));
+        this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, 7.0D, false));
         this.tasks.addTask(5, new EntityAIMoveTowardsRestriction(this, 1.0D));
         this.tasks.addTask(7, new EntityAIWander(this, 1.0D));
         this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 20.0F));
@@ -42,13 +40,14 @@ public class EntityArium extends EntityMob
     {
         super.applyEntityAttributes();
         this.getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(40.0D);
-        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(1.5D);
-        this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(5.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(1.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(7.0D);
         this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(20.0D);
     }
-
+    
     public Item getDropItem()
     {
-       return ItemMod.item_nuggets_arium;
+       return ItemMod.item_nuggets_nuclerium;
     }
+
 }

@@ -3,6 +3,7 @@ package com.mod.frostarium.world;
 import java.util.Random;
 
 import com.mod.frostarium.init.BlockMod;
+import com.mod.frostarium.init.StructureGenMod;
 
 import cpw.mods.fml.common.IWorldGenerator;
 import net.minecraft.block.Block;
@@ -45,22 +46,38 @@ public class WorldGenArium implements IWorldGenerator
         }
     }
     
+    private void addStructure(String string, Random random, World world, int posX, int posZ, int minY, int maxY, int spawnChance)
+    {
+        for(int i = 0; i < spawnChance ; i++)
+        {
+            int chunkSize = 16;
+            int Xpos = posX + random.nextInt(chunkSize);
+            int Ypos = minY + random.nextInt(maxY - minY);
+            int Zpos = posZ + random.nextInt(chunkSize);
+            
+            new StructureGenMod().generate(string, world, random, Xpos, Ypos, Zpos);
+            new StructureGenMod().generate1(string, world, random, Xpos, Ypos, Zpos);
+        }
+    }
+    
 
     private void GenerateNether(World world, int i, int j, Random random)
     {
-  
+        addOre(BlockMod.block_nuclerium_ore, Blocks.stone, random, world, i, j, 5, 60, 1, 2, 12);
     }
 
     private void GenerateOverWorld(World world, int i, int j, Random random)
     {
-        addOre(BlockMod.block_arium_ore, Blocks.stone, random, world, i, j, 0, 14, 1, 4, 20);
-        addOre(BlockMod.block_nuclerium_ore, Blocks.stone, random, world, i, j, 0, 10, 1, 2, 10);
-        addOre(BlockMod.block_rubyum_ore, Blocks.stone, random, world, i, j, 0, 12, 1, 3, 15);
-        addOre(BlockMod.block_optarium_ore, Blocks.stone, random, world, i, j, 0, 12, 1, 3, 12);
+        addOre(BlockMod.block_arium_ore, Blocks.stone, random, world, i, j, 5, 14, 1, 4, 17);
+        addOre(BlockMod.block_nuclerium_ore, Blocks.stone, random, world, i, j, 5, 12, 1, 2, 10);
+        addOre(BlockMod.block_rubyum_ore, Blocks.stone, random, world, i, j, 5, 12, 1, 3, 15);
+        addOre(BlockMod.block_optarium_ore, Blocks.stone, random, world, i, j, 5, 12, 1, 3, 12);
+        addStructure("StructureArium", random, world, i, j, 50, 250, 120);
+        addStructure("StructureNuclerium", random, world, i, j, 50, 250, 120);
     }
 
     private void GenerateEnd(World world, int i, int j, Random random)
     {
-        
+        addOre(BlockMod.block_nuclerium_ore, Blocks.stone, random, world, i, j, 5, 100, 1, 2, 14);
     }
 }

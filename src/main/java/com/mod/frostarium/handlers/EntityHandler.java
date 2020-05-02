@@ -21,7 +21,19 @@ public class EntityHandler
         int entityID = EntityRegistry.findGlobalUniqueEntityId();
         
         EntityRegistry.registerGlobalEntityID(entityClass, string, EntityRegistry.findGlobalUniqueEntityId(), new Color(10, 80, 206).getRGB(), new Color(254, 254, 255).getRGB());
-        EntityRegistry.addSpawn(string, 40, 3, 6, EnumCreatureType.monster, BiomeGenBase.plains);
+        EntityRegistry.addSpawn(string, 50, 4, 10, EnumCreatureType.monster, BiomeGenBase.ocean);
+        EntityRegistry.registerModEntity(entityClass, string, entityID, ModFrostArium.instance, 64, 1, true);
+       
+    }
+    
+    public static void registerMonster1(Class entityClass, String string)
+    {
+        int entityID = EntityRegistry.findGlobalUniqueEntityId();
+        
+        EntityRegistry.registerGlobalEntityID(entityClass, string, EntityRegistry.findGlobalUniqueEntityId(), new Color(32, 255, 0).getRGB(), new Color(254, 254, 255).getRGB());
+        EntityRegistry.addSpawn(string, 30, 2, 5, EnumCreatureType.monster, BiomeGenBase.ocean);
         EntityRegistry.registerModEntity(entityClass, string, entityID, ModFrostArium.instance, 64, 1, true);
     }
+    
+   
 }
