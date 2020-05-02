@@ -50,6 +50,9 @@ item.item_nuggets_arium.name=Arium Nugget
 item.item_nuggets_nuclerium.name=Nuclerium Nugget
 item.item_nuggets_rubyum.name=Rubyum Nugget
 item.item_nuggets_optarium.name=Optarium Nugget
+item.item_seed_arium.name=Arium Seed
+
+item.item_hammer_arium.name=Arium Hammer
 
 
 
@@ -62,7 +65,29 @@ tile.block_rubyum_ore.name=Rubyum Ore
 tile.block_rubyum_block.name=Rubyum Block
 tile.block_optarium_ore.name=Optarium Ore
 tile.block_optarium_block.name=Optarium Block
+tile.block_arium_grass.name=Arium Grass
+tile.block_arium_dirt.name=Arium Dirt
+tile.block_nuclerium_grass.name=Nuclerium Grass
+tile.block_nuclerium_dirt.name=Nuclerium Dirt
+
+tile.block_arium_wood.name=Arium Wood
+tile.block_nuclerium_wood.name=Nuclerium Wood
+tile.block_arium_planks.name=Arium Planks
+tile.block_nuclerium_planks.name=Nuclerium Planks
+tile.block_arium_leaves.name=Arium Leaves
+tile.block_nuclerium_leaves.name=Nuclerium Leaves
+
+tile.block_block_test.name=Block Test
+tile.block_invisble_block.name=Invisble Block
+tile.block_arium_chest.name=Arium Chest
 
 
 itemGroup.FrostArium=Frost Arium
 itemGroup.FrostArium Tool=Frost Arium Tool
+
+entity.MobArium.name=Arium
+entity.MobNuclerium.name=Nuclerium
+
+container.AriumChest=Arium Chest
+
+tile.AriumChestBlock.number=Value : %d

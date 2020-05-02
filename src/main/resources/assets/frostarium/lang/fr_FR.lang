@@ -51,6 +51,10 @@ item.item_nuggets_nuclerium.name=Pepite en Optarium
 item.item_nuggets_rubyum.name=Pepite en Optarium
 item.item_nuggets_optarium.name=Pepite en Optarium
 
+item.item_seed_arium.name=Graine d'Arium
+
+item.item_hammer_arium.name=Marteau en Arium
+
 tile.block_arium_block.name=Block d'Arium
 tile.block_green_screen.name=Fond Vert
 tile.block_arium_ore.name=Minerais d'Arium
@@ -60,6 +64,28 @@ tile.block_rubyum_ore.name=Minerais de Rubyum
 tile.block_rubyum_block.name=Block de Rubyum
 tile.block_optarium_ore.name=Minerais d'Optarium
 tile.block_optarium_block.name=Block en Optarium
+tile.block_arium_grass.name=Herbe d'Arium
+tile.block_arium_dirt.name=Terre d'Arium
+tile.block_nuclerium_grass.name=Herbe de Nuclerium
+tile.block_nuclerium_dirt.name=Terre de Nuclerium
+
+tile.block_arium_wood.name=Bois en Arium
+tile.block_nuclerium_wood.name=Bois en Nuclerium
+tile.block_arium_planks.name=Planche d'Arium
+tile.block_nuclerium_planks.name=Planche de Nuclerium
+tile.block_arium_leaves.name=Feuile d'Arium
+tile.block_nuclerium_leaves.name=Feuile de Nuclerium
+
+tile.block_block_test.name=Block Test
+tile.block_invisble_block.name=Invisble Block
+tile.block_arium_chest.name=Coffre en Arium
+
+tile.AriumChestBlock.number=Valeur : %d
+
+container.AriumChest=Coffre en Arium
 
 itemGroup.FrostArium=Frost Arium
 itemGroup.FrostArium Tool=Frost Arium Outils
+
+entity.MobArium.name=Arium
+entity.MobNuclerium.name=Nuclerium
